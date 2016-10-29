@@ -119,19 +119,21 @@ $(window).load(function(){
       }
     });
     $("#earth .pos .orbit .pos").on('click',function() {
-      jalan = 0;
-      timer.update({message:"<span style='font-size:20pt;font-weight:bold;'>"+finalTime(detik)+"</span>"});
-      $.notify({
-        title: "<span style='color:black;font-size:20pt;font-weight:bold;'>Congratulations!</span>",
-        message: "<span style='font-size:20pt;font-weight:bold;'>You click on moon</span><br><br><span style='font-size:15pt;font-weight:bold;'>Your time : </span><br><span style='font-size:50pt;font-weight:bold;'>"+finalTime(0)+"</span>",
-      },{
-        newest_on_top: true,
-        delay:0,
-        type: 'success',
-        allow_dismiss:false,
-      });
-      $(".content").html("Congratulations! You catch the moon :D<br><br><span style='font-size:15pt;font-weight:bold;text-align:center;'>Your time : </span><br><span style='font-size:50pt;font-weight:bold;'>"+finalTime(0)+"</span>");
-      open_pop("popup1");
+      if(jalan==1){
+        jalan = 0;
+        timer.update({message:"<span style='font-size:20pt;font-weight:bold;'>"+finalTime(detik)+"</span>"});
+        $.notify({
+          title: "<span style='color:black;font-size:20pt;font-weight:bold;'>Congratulations!</span>",
+          message: "<span style='font-size:20pt;font-weight:bold;'>You click on moon</span><br><br><span style='font-size:15pt;font-weight:bold;'>Your time : </span><br><span style='font-size:50pt;font-weight:bold;'>"+finalTime(0)+"</span>",
+        },{
+          newest_on_top: true,
+          delay:0,
+          type: 'success',
+          allow_dismiss:false,
+        });
+        $(".content").html("Congratulations! You catch the moon :D<br><br><span style='font-size:15pt;font-weight:bold;text-align:center;'>Your time : </span><br><span style='font-size:50pt;font-weight:bold;'>"+finalTime(0)+"</span>");
+        open_pop("popup1");
+      }
     });
         
     $("#mercury .pos").on('click',function() {
