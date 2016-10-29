@@ -15,6 +15,10 @@
     <meta name="keywords tag" content="Catch The Moon">
     <meta property="og:title" content="Catch The Moon" />
     <meta property="og:description" content="The Moon is Earth's only permanent natural satellite. It is the fifth-largest natural satellite in the Solar System, and the largest among planetary satellites relative to the size of the planet that it orbits (its primary). It is the second-densest satellite among those whose densities are known (after Jupiter's satellite Io). The average distance of the Moon from the Earth is 384,400 km (238,900 mi), or 1.28 light-seconds. The Moon is thought to have formed about 4.5 billion years ago, not long after Earth. There are several hypotheses for its origin; the most widely accepted explanation is that the Moon formed from the debris left over after a giant impact between Earth and a Mars-sized body called Theia." />
+    
+    <link href="{{url('img/moon.png')}}" rel="shortcut icon">
+    <link href="{{url('img/moon.png')}}" rel="favicon">
+
     <meta property="og:url" content="{{url()}}" />
     <meta property="og:image" content="{{url('img/catch-the-moon.jpg')}}" />
     <meta property="og:author" content="https://www.facebook.com/ixvimarch31" />
