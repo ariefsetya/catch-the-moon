@@ -102,34 +102,173 @@ $(window).load(function(){
     },1000);
 
     $("#earth .pos").on('click',function() {
-      detik++;
-      timer.update({message:"<span style='font-size:20pt;font-weight:bold;'>"+finalTime(detik)+"</span>",});
-      $.notify({
-        title: "<span style='color:black;font-size:20pt;font-weight:bold;'>+1s</span>",
-        message: "<span style='font-size:20pt;font-weight:bold;'>You click on earth</span>",
-      },{
-        newest_on_top: true,
-        delay:1,
-        type: 'danger',
-        animate:{
-          exit: "animated fadeOut"
-        }
-      });
+      if(jalan==1){
+        detik++;
+        timer.update({message:"<span style='font-size:20pt;font-weight:bold;'>"+finalTime(detik)+"</span>",});
+        $.notify({
+          title: "<span style='color:black;font-size:20pt;font-weight:bold;'>+1s</span>",
+          message: "<span style='font-size:20pt;font-weight:bold;'>You click on earth</span>",
+        },{
+          newest_on_top: true,
+          delay:1,
+          type: 'danger',
+          animate:{
+            exit: "animated fadeOut"
+          }
+        });
+      }
     });
     $("#earth .pos .orbit .pos").on('click',function() {
       jalan = 0;
       timer.update({message:"<span style='font-size:20pt;font-weight:bold;'>"+finalTime(detik)+"</span>"});
       $.notify({
         title: "<span style='color:black;font-size:20pt;font-weight:bold;'>Congratulations!</span>",
-        message: "<span style='font-size:20pt;font-weight:bold;'>You click on moon</span>",
+        message: "<span style='font-size:20pt;font-weight:bold;'>You click on moon</span><br><br><span style='font-size:15pt;font-weight:bold;'>Your time : </span><br><span style='font-size:50pt;font-weight:bold;'>"+finalTime(0)+"</span>",
       },{
         newest_on_top: true,
         delay:0,
         type: 'success',
         allow_dismiss:false,
       });
-      $(".content").html('Congratulations! You catch the moon :D');
+      $(".content").html("Congratulations! You catch the moon :D<br><br><span style='font-size:15pt;font-weight:bold;text-align:center;'>Your time : </span><br><span style='font-size:50pt;font-weight:bold;'>"+finalTime(0)+"</span>");
       open_pop("popup1");
+    });
+        
+    $("#mercury .pos").on('click',function() {
+      if(jalan==1){
+        detik+=5;
+        timer.update({message:"<span style='font-size:20pt;font-weight:bold;'>"+finalTime(detik)+"</span>",});
+        $.notify({
+          title: "<span style='color:black;font-size:20pt;font-weight:bold;'>+5s</span>",
+          message: "<span style='font-size:20pt;font-weight:bold;'>You click on mercury</span>",
+        },{
+          newest_on_top: true,
+          delay:1,
+          type: 'danger',
+          animate:{
+            exit: "animated fadeOut"
+          }
+        });
+      }
+    });
+    $("#venus .pos .planet").on('click',function() {
+      if(jalan==1){
+        detik+=3;
+        timer.update({message:"<span style='font-size:20pt;font-weight:bold;'>"+finalTime(detik)+"</span>",});
+        $.notify({
+          title: "<span style='color:black;font-size:20pt;font-weight:bold;'>+3s</span>",
+          message: "<span style='font-size:20pt;font-weight:bold;'>You click on venus</span>",
+        },{
+          newest_on_top: true,
+          delay:1,
+          type: 'danger',
+          animate:{
+            exit: "animated fadeOut"
+          }
+        });
+      }
+    });
+    $("#mars .pos .planet").on('click',function() {
+      if(jalan==1){
+        detik+=10;
+        timer.update({message:"<span style='font-size:20pt;font-weight:bold;'>"+finalTime(detik)+"</span>",});
+        $.notify({
+          title: "<span style='color:black;font-size:20pt;font-weight:bold;'>+10s</span>",
+          message: "<span style='font-size:20pt;font-weight:bold;'>You click on mars</span>",
+        },{
+          newest_on_top: true,
+          delay:1,
+          type: 'danger',
+          animate:{
+            exit: "animated fadeOut"
+          }
+        });
+      }
+    });
+    $("#jupiter .pos .planet").on('click',function() {
+      if(jalan==1){
+        detik+=4;
+        timer.update({message:"<span style='font-size:20pt;font-weight:bold;'>"+finalTime(detik)+"</span>",});
+        $.notify({
+          title: "<span style='color:black;font-size:20pt;font-weight:bold;'>+4s</span>",
+          message: "<span style='font-size:20pt;font-weight:bold;'>You click on jupiter</span>",
+        },{
+          newest_on_top: true,
+          delay:1,
+          type: 'danger',
+          animate:{
+            exit: "animated fadeOut"
+          }
+        });
+      }
+    });
+    $("#saturn .pos .planet").on('click',function() {
+      if(jalan==1){
+        detik+=7;
+        timer.update({message:"<span style='font-size:20pt;font-weight:bold;'>"+finalTime(detik)+"</span>",});
+        $.notify({
+          title: "<span style='color:black;font-size:20pt;font-weight:bold;'>+7s</span>",
+          message: "<span style='font-size:20pt;font-weight:bold;'>You click on saturn</span>",
+        },{
+          newest_on_top: true,
+          delay:1,
+          type: 'danger',
+          animate:{
+            exit: "animated fadeOut"
+          }
+        });
+      }
+    });
+    $("#uranus .pos").on('click',function() {
+      if(jalan==1){
+        detik+=6;
+        timer.update({message:"<span style='font-size:20pt;font-weight:bold;'>"+finalTime(detik)+"</span>",});
+        $.notify({
+          title: "<span style='color:black;font-size:20pt;font-weight:bold;'>+6s</span>",
+          message: "<span style='font-size:20pt;font-weight:bold;'>You click on uranus</span>",
+        },{
+          newest_on_top: true,
+          delay:1,
+          type: 'danger',
+          animate:{
+            exit: "animated fadeOut"
+          }
+        });
+      }
+    });
+    $("#neptune .pos").on('click',function() {
+      if(jalan==1){
+        detik+=11;
+        timer.update({message:"<span style='font-size:20pt;font-weight:bold;'>"+finalTime(detik)+"</span>",});
+        $.notify({
+          title: "<span style='color:black;font-size:20pt;font-weight:bold;'>+11s</span>",
+          message: "<span style='font-size:20pt;font-weight:bold;'>You click on neptune</span>",
+        },{
+          newest_on_top: true,
+          delay:1,
+          type: 'danger',
+          animate:{
+            exit: "animated fadeOut"
+          }
+        });
+      }
+    });
+    $("#sun").on('click',function() {
+      if(jalan==1){
+        detik+=50;
+        timer.update({message:"<span style='font-size:20pt;font-weight:bold;'>"+finalTime(detik)+"</span>",});
+        $.notify({
+          title: "<span style='color:black;font-size:20pt;font-weight:bold;'>+50s</span>",
+          message: "<span style='font-size:20pt;font-weight:bold;'>You click on sun</span>",
+        },{
+          newest_on_top: true,
+          delay:1,
+          type: 'danger',
+          animate:{
+            exit: "animated fadeOut"
+          }
+        });
+      }
     });
   }
 });
@@ -295,7 +434,8 @@ function sign_in() {
   $(".bt-overlay").html('<div class="play_2">Sign Up<h2>For New User</h2><br><form><table><tr><td><input placeholder="Name" name="name" type="text"></td></tr><tr><td><input type="email" name="email" placeholder="E-Mail"></td></tr><tr><td><input type="password" name="password" placeholder="Password"></td></tr><tr><td><button type="submit" class="btn">Sign Up</button></td></tr></table></form></div><div class="play_2">Sign In<h2>I Already Registered</h2><br><form><table><tr><td><input type="email" name="email" placeholder="E-Mail"></td></tr><tr><td><input type="password" name="password" placeholder="Password"></td></tr><tr><td><button type="submit" class="btn">Sign In</button></td></tr></table></form></div>');
 }
 $(".bt-menu-trigger").on('click',function() {
-  $(".bt-overlay").html('<div class="play_1 superbig center"><h2>Lv9 1000pts</h2></div>');
+  $(".bt-overlay").html('<div class="play_1 superbig center"><h2>;)</h2></div>');
 });
 
-window.onresize=function(){if((window.outerHeight-window.innerHeight)>100)$("html").remove();}
+window.onresize=function(){if((window.outerHeight-window.innerHeight)>100)$("html").remove();
+if((window.outerWidth-window.innerWidth)>100)$("html").remove();}
